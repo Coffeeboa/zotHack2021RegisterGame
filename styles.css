@@ -1,0 +1,23 @@
+.centered{
+    text-align: center;
+}
+
+#toptitle{
+    color: hsl(147, 63%, 34%);
+    font-family: 'Fredoka One', cursive;
+    font-size: 80px;
+    text-shadow: 3px 3px 3px rgb(153, 152, 152);
+}
+body {
+    background-color: #E2D965;
+  }
+  #diff{
+    color: black;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 40px;
+  }
+  #difficulty{
+    color: black;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+  }
