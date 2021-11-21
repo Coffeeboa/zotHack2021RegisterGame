@@ -67,15 +67,21 @@ async function returnCashUpdate() {
        document.getElementById("moneyReturnAmount").innerHTML = data;
     });
 
-
-
     return;
 }
 
-async function alertTest() {
-    alert("alert test")
+async function newGame() {
+    await fetch("http://127.0.0.1:5000/new_game", {
+        method: 'POST',
+    }).then(response => response.json())
+     .then(data => {
+       console.log(data[0])
+       console.log(data[1])
+       document.getElementById("amount due").innerHTML = data[0];
+       document.getElementById("cash given").innerHTML = data[1];
 
+    });
 
-
+    console.log("new game was called")
     return;
 }
