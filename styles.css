@@ -75,4 +75,6 @@ body {
   color: hsl(180, 1%, 22%);
   font-family: 'Outfit', sans-serif;
   font-size: 30px;
+  text-align: center;
+  text-align: justify;
 }
