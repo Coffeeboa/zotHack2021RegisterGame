@@ -150,21 +150,42 @@ def picked_more_money():
 
 @app.route("/submit_and_clear",methods=["POST"])
 def submit_and_clear():
+    global difficulty, amountDue, cashGiven
     global startTime, CurrentMoneyPicked, line, score
     totalTimePassed = time.time()-startTime
 
     if totalTimePassed > line.timer():
-        return "Game ended"
+        return "Game ended, ran out of time"
 
     currentCustomer = line.line()[0]
     if currentCustomer.correct_change() == CurrentMoneyPicked:
         score += 100*(1+string_Difficult_to_int(difficulty))
+    else:
+        score -= 100 * (1 + string_Difficult_to_int(difficulty))
+
 
     line.remove_first_in_line()
 
+    if (len(line.line()) == 0):
+
+        difficulty = "Easy"
+        CurrentMoneyPicked = 0
+        # might be better to have a default line created here
+        line = CustomerState(5, 0)
+        startTime = 0
+
+        amountDue = 0
+        cashGiven = 0
+
+        if score > 0:
+            score = 0
+            return "YOU WIN"
+        score = 0
+        return "YOU LOSE"
+
     # link with game here
     CurrentMoneyPicked = 0
-    return "200"
+    return str(score)
 
 
 @app.route("/return_current_money_picked",methods=["POST"])
@@ -183,3 +204,8 @@ def new_game():
     jsonObj = json.dumps(returnTuple)
     return jsonObj
 
+@app.route("/return_amount_due_cash_given",methods=["POST"])
+def return_amount_due_cash_given():
+    returnTuple = [str(line.line()[0].due()), str(line.line()[0].given())]
+    jsonObj = json.dumps(returnTuple)
+    return jsonObj

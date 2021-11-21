@@ -52,8 +52,24 @@ async function returnCash(event) {
         method: 'POST',
     }).then(response => response.text())
     .then(data => {
+        if (data == "YOU WIN" || data == "Game ended, ran out of time" || data == "YOU LOSE" ){
+            document.getElementById("score").innerHTML = '<a href="game.html">'+data+"</a>";
+            return;
+        }
+
+
+        document.getElementById("score").innerHTML = data;
         returnCashUpdate()
     });
+
+       await fetch("http://127.0.0.1:5000/return_amount_due_cash_given", {
+        method: 'POST',
+    }).then(response => response.json())
+    .then(data => {
+       document.getElementById("amount due").innerHTML = data[0];
+       document.getElementById("cash given").innerHTML = data[1];
+    });
+
 
     return;
 }
