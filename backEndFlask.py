@@ -2,6 +2,7 @@ from flask import Flask
 from flask import request
 from flask_cors import CORS
 import json
+from math import floor
 
 # cashier logic
 EASY = 0
@@ -45,7 +46,7 @@ class CustomerState:
         # TODO finish generating a list of customers
         if difficulty == EASY:
             self._customer_line = self._easy_customers(line_length)
-            self._timer = 120
+            self._timer = 10
 
 
         elif difficulty == MEDIUM:
@@ -209,3 +210,10 @@ def return_amount_due_cash_given():
     returnTuple = [str(line.line()[0].due()), str(line.line()[0].given())]
     jsonObj = json.dumps(returnTuple)
     return jsonObj
+
+@app.route("/get_time",methods=["POST"])
+def get_time():
+    global startTime
+    if (secsLeft := floor(10 - (time.time() - startTime))) < 0 :
+        secsLeft = 0
+    return str(secsLeft)

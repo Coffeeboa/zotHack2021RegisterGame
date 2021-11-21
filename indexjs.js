@@ -101,3 +101,17 @@ async function newGame() {
     console.log("new game was called")
     return;
 }
+
+async function get_time() {
+    await fetch("http://127.0.0.1:5000/get_time", {
+        method: 'POST',
+    }).then(response => response.text())
+     .then(data => {
+       document.getElementById("seconds").innerHTML = data+"s left";
+
+    });
+
+    console.log("new game was called")
+    return;
+}
+
