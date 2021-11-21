@@ -11,6 +11,13 @@
         @import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Titan+One&display=swap');
     </style> 
 </head>
+<center>
+    <div id="countdown-container">
+        <div id="countdown">
+            <span id="minutes">0m</span> : <span id="seconds">0s</span>
+        </div>
+    </div>
+</center>
 <body>
 <div>  
     <div class = "scoreboard">
@@ -25,26 +32,26 @@
         </p>
     </div>
 </div>
-<p>Total Return Amount</p>
+<p id="totalreturn">Total Return Amount</p>
 <p id="moneyReturnAmount">0.00</p>
 
 
 <p>
-    <button class = "cashier-button" onclick="addMoney(event,.01)">.01</button>
+    <button class = "cashier-button" id="button1"onclick="addMoney(event,.01)">.01</button>
     <button class = "cashier-button" onclick="addMoney(event,.05)">.05</button>
     <button class = "cashier-button" onclick="addMoney(event,.10)">.10</button>
     <button class = "cashier-button" onclick="addMoney(event,.25)">.25</button>
     <button class = "cashier-button" onclick="addMoney(event,.5)">.5</button>
 </p>
 <p>
-    <button class = "cashier-button" onclick="addMoney(event,1)">1</button>
+    <button class = "cashier-button" id="button2" onclick="addMoney(event,1)">1</button>
     <button class = "cashier-button" onclick="addMoney(event,5)">5</button>
     <button class = "cashier-button" onclick="addMoney(event,10)">10</button>
     <button class = "cashier-button" onclick="addMoney(event,20)">20</button>
     <button class = "cashier-button" onclick="addMoney(event,50)">50</button>
 </p>
 <p>
-    <button class = "cashier-button" onclick="returnCash(event)">Return Cash</button>
+    <button class = "cashier-button" id="button3" onclick="returnCash(event)">Return Cash</button>
 </p>
 <p> 
 

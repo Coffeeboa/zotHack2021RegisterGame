@@ -19,19 +19,83 @@ body {
     text-align: center;
 }
 .moneybox{
-    background-color: lightgrey;
+    background-color: #B0E298;;
     width: 300px;
-    border: 5px solid black;
+    border: 5px solid rgb(129, 129, 129);
     padding: 20px;
     position: absolute;
     margin-right: 5px;
-    font-family: 'Concert One', cursive;
-    font-size: 25px;
-    color: black;
+    font-family: 'Titan One', cursive;
+    font-size: 23px;
+    color: #34623f;
     text-align: center;
     right: 50px;
     top: 100px;
     text-align: left;
 
 }
+.cashier-button{
+    font-family: 'Concert One', cursive;
+    font-size: 35px;
+    color: #34623f;
+    background-color: #B0E298;
+    margin: 8px 8px 8x 8px;
+    
+    
 
+}
+#totalreturn{
+    font-family: 'Titan One', cursive;
+    font-size: 35px;
+    color: #5171A5;
+
+}
+#moneyReturnAmount{
+    font-family: 'Titan One', cursive;
+    font-size: 35px;
+    color: #5171A5;
+   
+}
+#countdown-container {
+    display: inline-block; /*displays divs on a line*/
+    width: 300px; /*gives the div element a width of 300px*/
+    margin: 20px 0; /*gives 20px space at the top and bottom of the div element*/
+    border-radius: 5px; /*curves the edges of the div element by 5px;*/
+    background: #1d81af; /*gives the div element a background color*/
+}
+#countdown {
+    font-family: "Fira Sans", sans-serif; /*changes the text font in the divelement */
+    display: inline-block; /*displays divs on a line*/
+    padding: 30px; /*creates 30px space between the content of the div element and the walls of the div element*/
+    background: #1d81af;
+    color: white; /*changes the text color in the div element*/
+}
+
+#countdown span {
+    font-weight: bold; /*boldens text in the span element*/
+    font-size: 30px; /*changes the text size in the span element*/
+}
+#button1{
+    font-family: 'Concert One', cursive;
+    font-size: 35px;
+    color: #34623f;
+    background-color: #B0E298;
+    margin-left: 40%;
+   
+}
+#button2{
+    font-family: 'Concert One', cursive;
+    font-size: 35px;
+    color: #34623f;
+    background-color: #B0E298;
+    margin-left: 40%;
+    
+}
+#button3{
+    font-family: 'Concert One', cursive;
+    font-size: 35px;
+    color: #34623f;
+    background-color: #B0E298;
+    margin-left: 40%;
+    
+}
