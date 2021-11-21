@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cashier Simulator</title>
+    <link rel="stylesheet" href="gameStyle.css">
+</head>
+<body>
+
+<p>Total Return Amount</p>
+<p id="moneyReturnAmount">0.00</p>
+
+
+<p>
+    <button class = "cashier-button" onclick="addMoney(event,.01)">.01</button>
+    <button class = "cashier-button" onclick="addMoney(event,.05)">.05</button>
+    <button class = "cashier-button" onclick="addMoney(event,.10)">.10</button>
+    <button class = "cashier-button" onclick="addMoney(event,.25)">.25</button>
+    <button class = "cashier-button" onclick="addMoney(event,.5)">.5</button>
+</p>
+<p>
+    <button class = "cashier-button" onclick="addMoney(event,1)">1</button>
+    <button class = "cashier-button" onclick="addMoney(event,5)">5</button>
+    <button class = "cashier-button" onclick="addMoney(event,10)">10</button>
+    <button class = "cashier-button" onclick="addMoney(event,20)">20</button>
+    <button class = "cashier-button" onclick="addMoney(event,50)">50</button>
+</p>
+<p>
+    <button class = "cashier-button" onclick="returnCash(event)">Return Cash</button>
+</p>
+
+<script src="indexjs.js"></script>
+</body>
+</html>
