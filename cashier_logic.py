@@ -93,4 +93,8 @@ class CustomerState:
         
     def line(self):
         return self._customer_line
+
+    def remove_first_in_line(self):
+        self._customer_line = self._customer_line[1:]
+
     
