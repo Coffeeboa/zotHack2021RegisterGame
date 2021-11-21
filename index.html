@@ -11,10 +11,17 @@
 <body>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand&display=swap');
+        @import url('https://fonts.google.com/share?selection.family=Mochiy%20Pop%20One%7COutfit:wght@500');
     </style>  
     <h1 class = "centered" id="toptitle">Welcome to Cashier Simulator</h1>
-    <form>
-        <label for="difficulty" id="diff"> Difficulty</label>
+
+    <div id="card-container">
+		<div class="card">
+
+			<!-- This initiates the creation of a form -->
+			<form id="form" class="card__form">
+
+				<label for="difficulty" id="diff">Difficulty</label>
         <select id="difficulty">
             <option value="difficulty">Difficulty Select</option>
             <option value="Easy">Easy</option>
@@ -22,10 +29,16 @@
             <option value="Hard">Hard</option>
             <option value="Impossible">Impossible</option>
         </select>
-        <button class=difficulty_submit" onclick="sendDifficulty(event)">SUBMIT</button>
+        
+        <button id="button" class=difficulty_submit" onclick="sendDifficulty(event)">SUBMIT</button>
 
-    </form>
+    </div>
 
     <script src="indexjs.js"></script>
+
+    <h2 class = "centered" id="how_to_play_title">How to Play</h2>
+
+    <h4 class = "centered" id="how_to_play_instructions">1. Enter difficulty.<br>2. Give change to customers as quickly as possible. </br>3. Clear out the store before time runs out.<br></h4>
+
 </body>
 </html>

@@ -12,12 +12,67 @@ body {
     background-color: #E2D965;
   }
   #diff{
-    color: black;
-    font-family: 'Quicksand', sans-serif;
+    color: rgb(48, 46, 46);
+    font-family: 'Outfit', sans-serif;
     font-size: 40px;
   }
+  #button{
+    background-color: #e9d985;
+  }
   #difficulty{
-    color: black;
+    background-color: hsl(147, 30%, 57%);
+    color: rgb(41, 38, 38);
     font-family: 'Quicksand', sans-serif;
     font-size: 20px;
+  }#card-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
   }
+  .card {
+    background: hsl(147, 63%, 34%);
+    text-align: center;
+    padding: 40px 33px;
+    border-radius: 5px;
+    box-shadow: 0px 12px 8px rgb(0 0 0 / 38%);
+    width: 450px;
+  }
+  
+  .card__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    position: relative;
+  
+  }
+  .card__form__submit {
+    background: #BC66E5;
+    border: none;
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    font-weight: 700;
+    padding: 14px;
+    margin: 16px 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px #1f196c;
+  }
+
+  .centered{
+    text-align: center;
+}
+#how_to_play_title{
+  color: hsl(147, 30%, 42%);
+  font-family: 'Fredoka One', cursive;
+  font-size: 50px;
+  margin-bottom: 2px;
+}
+  
+#how_to_play_instructions{
+  color: hsl(180, 1%, 22%);
+  font-family: 'Outfit', sans-serif;
+  font-size: 30px;
+}
