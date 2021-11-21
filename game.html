@@ -7,17 +7,33 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cashier Simulator</title>
     <link rel="stylesheet" href="gameStyle.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Titan+One&display=swap');
+    </style> 
 </head>
 <body>
 
+
 <script src="indexjs.js"></script>
 <script>newGame()</script>
-<p>Amount Due</p>
-<p id="amount due">0.00</p>
-<p>Cash Given</p>
-<p id="cash given">0.00</p>
-<p>score</p>
-<p id="score">0.00</p>
+
+
+<div>  
+    <div class = "scoreboard">
+        <p id="score">Score:
+            Placeholder
+        </p>
+    </div>
+    <div class = "moneybox">
+        <p>
+            Amount Due: Placeholder
+            Cash Given: Placeholder
+        </p>
+    </div>
+</div>
+<p>Total Return Amount</p>
+<p id="moneyReturnAmount">0.00</p>
+
 
 
 <p>Total Return Amount</p>
@@ -40,6 +56,7 @@
 <p>
     <button class = "cashier-button" onclick="returnCash(event)">Return Cash</button>
 </p>
+<p> 
 
 
 
