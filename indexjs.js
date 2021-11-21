@@ -1,3 +1,4 @@
+
 async function sendDifficulty(event) {
     event.preventDefault();
 
@@ -65,6 +66,14 @@ async function returnCashUpdate() {
     .then(data => {
        document.getElementById("moneyReturnAmount").innerHTML = data;
     });
+
+
+
+    return;
+}
+
+async function alertTest() {
+    alert("alert test")
 
 
 

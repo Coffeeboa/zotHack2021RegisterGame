@@ -2,7 +2,6 @@ from flask import Flask
 from flask import request
 from flask_cors import CORS
 
-
 app = Flask(__name__)
 CORS(app)
 
@@ -53,3 +52,6 @@ def submit_and_clear():
 def return_current_money_picked():
     global CurrentMoneyPicked
     return str(CurrentMoneyPicked)
+
+
+
